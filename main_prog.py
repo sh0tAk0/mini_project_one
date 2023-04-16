@@ -1,4 +1,25 @@
 from random import randint
+from time import sleep
+from os import name , system
+
+def clear():
+   """clear terminal or cmd window"""
+   # for windows
+   if name == 'nt':
+        system('cls')
+
+   # for mac and linux
+   else:
+    system('clear')
+
+def intro():
+    """show intro before game start"""
+    print("welcome to rock paper scissors game")
+    sleep(2)
+
+    clear()
+    pass
+
 
 def check(p , c):
     """check who win"""
@@ -19,7 +40,10 @@ def check(p , c):
         print("winner is cpu !!")
 
 
+#main 
+intro()
 for i in range(10):
+
 
     player_choice = int(input("enter number (0 , 1 , 2) : "))
 
